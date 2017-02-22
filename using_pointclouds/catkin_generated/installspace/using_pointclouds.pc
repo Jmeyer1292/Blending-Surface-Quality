@@ -1,0 +1,8 @@
+prefix=/home/mstest9/catkin_ws/install
+
+Name: using_pointclouds
+Description: Description of using_pointclouds
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mstest9/catkin_ws/install/lib 
+Requires: 

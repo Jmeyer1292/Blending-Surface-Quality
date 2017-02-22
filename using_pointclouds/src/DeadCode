@@ -1,0 +1,93 @@
+  //pcl::PCLPointCloud2::Ptr cloud_blob (new pcl::PCLPointCloud2), cloud_filtered_blob (new pcl::PCLPointCloud2);
+
+   //msg->points.push_back (pcl::PointXYZ(1.0, 2.0, 3.0));
+
+ // std::string my_str = homeDir+"/"+PlateScanPath ;
+  //const char* conv_my_str = my_str.c_str();
+
+     // double data[5000][5000];
+
+       //std::string my_str2 = homeDir+"/"+tableScanPath ;
+
+
+  //const char* conv_my_str2 = my_str2.c_str();
+  //std::cout<<"Path of CSV file: "<<conv_my_str<<std::endl;
+
+
+      //    std::cout<<"Row : "<<row;
+//     std::cout<<"Col : "<<col<<" ";
+
+
+// data[row][col] = convertor;
+          // std::cout<<data[row][col]<<std::endl;
+
+
+           //       std::cout<<"X Y Z = "<<MediumData[rowMulCol][0]<<" "<<MediumData[rowMulCol][1]<<"
+//"<<MediumData[rowMulCol][2]<<std::endl;
+
+  // Fill in the cloud data
+  /*
+  pcl::PCDReader reader;
+  reader.read (conv_my_str2, *cloud_blob);
+
+  std::cerr << "PointCloud before filtering: " << cloud_blob->width * cloud_blob->height << " data points." << std::endl;
+
+  // Create the filtering object: downsample the dataset using a leaf size of 1cm
+
+  pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
+  sor.setInputCloud (cloud_blob);
+  sor.setLeafSize (0.01f, 0.01f, 0.01f);
+  sor.filter (*cloud_filtered_blob);
+
+  // Convert to the templated PointCloud
+  pcl::fromPCLPointCloud2 (*cloud_filtered_blob, *cloud_filtered);
+
+  std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height << " data points." << std::endl;
+*/
+  // Write the downsampled version to disk
+  //pcl::PCDWriter writer;
+  //writer.write<pcl::PointXYZ> ("table_scene_lms400_downsampled.pcd", *cloud_filtered, false);
+
+  /*
+    std::stringstream ss;
+    ss << "table_scene_lms400_plane_" << i << ".pcd";
+    writer.write<pcl::PointXYZ> (ss.str (), *cloud_p, false);
+*/
+
+  //  msg->header.stamp = ros::Time::now().toNSec();
+
+  /*
+  while (nh.ok())
+  {
+
+  //  msg->header.stamp = ros::Time::now().toNSec();
+	pcl_pub.publish(msg);
+    ros::spinOnce ();
+    loop_rate.sleep ();
+  }
+*/
+
+//Loading csv linearized pcl data in array linPCLData
+/*
+  float** linPCLData = new float*[numPCLPtsMax];
+  for(int i = 0; i < numPCLPtsMax; ++i)
+      linPCLData[i] = new float[numPCLColMax];
+
+*/
+ //        linPCLData[rowMulCol][0] = col;
+    //        linPCLData[rowMulCol][1] = row;
+    //        linPCLData[rowMulCol][2] = data[row][col];
+
+    /*
+            if(linPCLData[rowMulCol][2] < numHighPCLThresh &&
+               linPCLData[rowMulCol][2] > numLowPCLThresh)
+               {
+
+
+                  msg->points.push_back (pcl::PointXYZ(linPCLData[rowMulCol][1],
+                                                       linPCLData[rowMulCol][0],
+                                                       linPCLData[rowMulCol][2]));
+               }*/
+
+//Display dimensions of the extracted plane
+//   std::cerr << "PointCloud representing the planar component: " << cloud_p->width * cloud_p->height << " data points." << std::endl;

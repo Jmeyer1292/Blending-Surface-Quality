@@ -1,18 +1,21 @@
-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-
+cmake_minimum_required(VERSION 2.8)
 project(using_pointclouds)
 
-find_package( PCL REQUIRED )
 find_package(catkin REQUIRED COMPONENTS
+  pcl_ros
   roscpp
-  
 )
-include_directories(${PCL_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
 
-link_directories(${PCL_LIBRARY_DIRS})
+catkin_package(
+  CATKIN_DEPENDS
+    roscpp
+    pcl_ros
+)
 
-add_definitions(${PCL_DEFINITIONS})
+include_directories(${catkin_INCLUDE_DIRS})
 
 add_executable (publish_pointcloud src/publish_pointcloud.cpp)
 
-target_link_libraries (publish_pointcloud ${PCL_LIBRARIES} ${catkin_LIBRARIES} )
+target_link_libraries (publish_pointcloud 
+  ${catkin_LIBRARIES}
+)

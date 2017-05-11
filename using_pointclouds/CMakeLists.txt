@@ -14,4 +14,5 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 add_executable (publish_pointcloud src/publish_pointcloud.cpp)
+
 target_link_libraries (publish_pointcloud ${PCL_LIBRARIES} ${catkin_LIBRARIES} )
